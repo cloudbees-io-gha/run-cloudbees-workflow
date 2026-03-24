@@ -1,5 +1,5 @@
-name: 'Trigger Platform workflow'
-description: 'Trigger a CloudBees platform workflow from a GHA workflow run.'
+name: 'Trigger Unify workflow'
+description: 'Trigger a CloudBees Unify workflow from a GHA workflow run.'
 
 branding:
   icon: 'command'
@@ -7,11 +7,11 @@ branding:
 
 inputs:
   cloudbees-url:
-    description: 'The CloudBees platform URL.'
+    description: 'CloudBees Unify URL.'
     required: false
     default: "https://api.cloudbees.io"
   cloudbees-pat:
-    description: 'The CloudBees platform personal access token.'
+    description: 'CloudBees Unify personal access token.'
     required: true
   component-id:
     description: 'The Component-id of the CloudBees workflow to be run. '
