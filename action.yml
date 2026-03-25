@@ -7,11 +7,11 @@ branding:
 
 inputs:
   cloudbees-url:
-    description: 'CloudBees Unify URL.'
+    description: 'The CloudBees Unify URL.'
     required: false
     default: "https://api.cloudbees.io"
   cloudbees-pat:
-    description: 'CloudBees Unify personal access token.'
+    description: 'The CloudBees Unify personal access token.'
     required: true
   component-id:
     description: 'The Component-id of the CloudBees workflow to be run. '

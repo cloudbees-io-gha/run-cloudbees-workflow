@@ -26,7 +26,7 @@ For more information, refer to the link:https://docs.cloudbees.com/docs/cloudbee
 | `cloudbees-url`
 | String
 | No
-| CloudBees Unify URL.
+| The CloudBees Unify URL.
 The default value is `"https://api.cloudbees.io"`.
 
 | `component-id`
@@ -66,7 +66,7 @@ The default is the same branch as the triggering GHA workflow.
 
 | `cbp-run-url`
 | String
-| CloudBees Unify URL of the triggered CloudBees workflow run.
+| The CloudBees Unify URL of the triggered CloudBees workflow run.
 
 |===
 
