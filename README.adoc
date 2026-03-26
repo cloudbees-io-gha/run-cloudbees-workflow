@@ -1,7 +1,7 @@
 = Run a CloudBees Unify workflow
  
 Use this GitHub Action (GHA) in a GHA workflow to trigger a CloudBees Unify workflow.
-For more information, refer to the link:https://docs.cloudbees.com/docs/cloudbees-platform/latest/workflows/[platform workflow documentation].
+For more information, refer to the link:https://docs.cloudbees.com/docs/cloudbees-platform/latest/workflows/[unify workflow documentation].
 
 == Inputs
 
@@ -33,7 +33,7 @@ The default value is `"https://api.cloudbees.io"`.
 | String
 | No
 | The identifier of CloudBees Unify component where the workflow to be run resides.
-If the caller GHA workflow has been onboarded to the platform, the default is the component ID of where the caller GHA workflow is located.^<<footnote,[1]>>^
+If the caller GHA workflow has been onboarded to Unify, the default is the component ID of where the caller GHA workflow is located.^<<footnote,[1]>>^
 
 | `branch-name`
 | String
@@ -210,7 +210,7 @@ jobs:
           URL="docker.io/${{ secrets.DOCKER_USERNAME }}/demo-service:${{ steps.versioning.outputs.version }}"
           echo "url=$URL" >> $GITHUB_OUTPUT
 
-      - name: Register Build Artifacts in Cloudbees Platform
+      - name: Register Build Artifacts in CloudBees Unify
         uses: cloudbees-io-gha/register-build-artifact@v3
         with:
           name: "gha-artifact-test"
@@ -219,7 +219,7 @@ jobs:
           digest: "sha256:1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqr"
           type: "docker"
 
-      - name: Run platform workflow
+      - name: Run unify workflow
         uses: cloudbees-io-gha/run-cloudbees-workflow@v1
         id: run-my-workflow
         with:
