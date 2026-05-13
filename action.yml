@@ -32,7 +32,7 @@ outputs:
 
 runs:
   using: "docker"
-  image: "docker://public.ecr.aws/l7o7z1g8/actions/gha-run-cbp-workflow:main-8f2add6498938993dd9fd9b95dd91c4df42862e2"
+  image: "docker://public.ecr.aws/l7o7z1g8/actions/gha-run-cbp-workflow:main-002add6498938993dd9fd9b95dd91c4df42862e2"
   env:
     CLOUDBEES_API_URL: ${{ inputs.cloudbees-url }}
     CLOUDBEES_API_TOKEN: ${{ inputs.cloudbees-pat }}
